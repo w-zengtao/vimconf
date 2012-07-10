@@ -150,6 +150,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 
 " vundle插件设置
+let root = '~/.vim/bundle'
+if !isdirectory(expand(root).'/vundle')
+  exec '!git clone http://github.com/gmarik/vundle.git '.root.'/vundle'
+endif
+
+filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
