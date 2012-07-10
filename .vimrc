@@ -66,6 +66,7 @@ nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>con
 " 回到上次编辑的地方
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                       设置状态行
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,7 +148,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" ack插件设置
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" NERDTree快捷键
+nmap ,n :NERDTree<CR>
+nmap ri :NERDTreeFind<CR>
 
 Bundle 'gmarik/vundle'
 Bundle 'mattn/zencoding-vim'
@@ -166,11 +172,12 @@ Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
 Bundle "othree/xml.vim"
 Bundle "fholgado/minibufexpl.vim"
+Bundle "tpope/vim-commentary"
 " Bundle 'vim-scripts/AutoComplPop.git' 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    " ctrl+c ctrl+v        
+    "                                复制与粘贴     
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " CTRL-X and SHIFT-Del are Cut
