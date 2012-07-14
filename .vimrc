@@ -3,6 +3,7 @@ filetype plugin indent on
  
 " 显示行号
 set number
+let mapleader = ','
  
 " 设置四个空格对齐
 set tabstop=2
@@ -50,18 +51,6 @@ syntax on
 " 去掉工具栏
 set go-=T
 
-" 使用 tab 及 shift-tab 进行缩排
-nmap <tab> V>
-nmap <s-tab> V<
-vmap <tab> >gv
-vmap <s-tab> <gv
-
-" 按ctrl+s保存文件
-nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
-
-:nmap <c-s> :w<CR>
-:imap <c-s> <Esc>:w<CR>a
-:imap <c-s> <Esc><c-s>
 
 " 回到上次编辑的地方
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -70,6 +59,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,26 +135,17 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 " call pathogen#infect()
 
 " 打开就开启NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 " vundle插件设置
-let root = '~/.vim/bundle'
-if !isdirectory(expand(root).'/vundle')
-  exec '!git clone http://github.com/gmarik/vundle.git '.root.'/vundle'
-endif
-
-filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" ack插件设置
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" NERDTree快捷键
-nmap ,n :NERDTree<CR>
-nmap ri :NERDTreeFind<CR>
+" nmap ,n :NERDTree<CR>
+" nmap ri :NERDTreeFind<CR>
 
 Bundle 'gmarik/vundle'
 Bundle 'mattn/zencoding-vim'
@@ -173,8 +154,12 @@ Bundle 'kien/ctrlp.vim.git'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "snipmate-snippets"
-Bundle "garbas/vim-snipmate"
+"Bundle "snipmate-snippets"
+" Bundle "honza/snipmate-snippets"
+" Bundle "garbas/vim-snipmate"
+Bundle 'garbas/vim-snipmate'
+Bundle 'spf13/snipmate-snippets'
+
 Bundle "taglist.vim"
 Bundle "mileszs/ack.vim"
 Bundle "tpope/vim-rails"
@@ -182,61 +167,74 @@ Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
 Bundle "othree/xml.vim"
-Bundle "fholgado/minibufexpl.vim"
+" Bundle "fholgado/minibufexpl.vim"
 Bundle "tpope/vim-commentary"
+Bundle 'vim-scripts/sessionman.vim'
+Bundle 'corntrace/bufexplorer'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'spf13/vim-colors'
+Bundle 'AutoClose'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'leshill/vim-json'
+Bundle 'groenewege/vim-less'
+Bundle 'taxilian/vim-web-indent'
+Bundle 'HTML-AutoCloseTag'
+Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Bundle 'spf13/vim-markdown'
+Bundle 'spf13/vim-preview'
+Bundle 'tpope/vim-cucumber'
+Bundle 'Puppet-Syntax-Highlighting'
+
+
+if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+  source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+endif
+
 " Bundle 'vim-scripts/AutoComplPop.git' 
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+" AutoCloseTag {
+    " Make it so AutoCloseTag works for xml and xhtml files as well
+    au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
+    nmap <Leader>ac <Plug>ToggleAutoCloseMappings
+" }
 
+" NerdTree {
+    map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+    map <leader>e :NERDTreeFind<CR>
+    nmap <leader>nt :NERDTreeFind<CR>
+    let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+" }
+" Session List {
+     set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+     nmap <leader>sl :SessionList<CR>
+     nmap <leader>ss :SessionSave<CR>
+  " }
+" Buffer explorer {
+    nmap <leader>b :BufExplorer<CR>
+ " }
+ " ctrlp {
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+        \ 'file': '\.exe$\|\.so$\|\.dll$' }
+    let g:ctrlp_working_path_mode = 0
+ "}
+" Fugitive {
+    nnoremap <silent> <leader>gs :Gstatus<CR>
+    nnoremap <silent> <leader>gd :Gdiff<CR>
+    nnoremap <silent> <leader>gc :Gcommit<CR>
+    nnoremap <silent> <leader>gb :Gblame<CR>
+    nnoremap <silent> <leader>gl :Glog<CR>
+    nnoremap <silent> <leader>gp :Git push<CR>
+ "}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    "                                复制与粘贴     
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ack插件设置
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" CTRL-X and SHIFT-Del are Cut
-vnoremap <C-X> "+x
-vnoremap <S-Del> "+x
-
-" CTRL-C and CTRL-Insert are Copy
-vnoremap <C-C> "+y
-vnoremap <C-Insert> "+y
-
-" CTRL-V and SHIFT-Insert are Paste
-map <C-V>   	"+gP
-map <S-Insert>  	"+gP
-
-cmap <C-V>  	<C-R>+
-cmap <S-Insert> 	<C-R>+
-
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-
-imap <S-Insert> 	<C-V>
-vmap <S-Insert> 	<C-V>
-
-" Use CTRL-Q to do what CTRL-V used to do
-noremap <C-Q>   	<C-V>
-
-if has("virtualedit")
-  let paste#paste_cmd = {'n': ":call paste#Paste()<CR>"}
-  let paste#paste_cmd['v'] = '"-c<Esc>' . paste#paste_cmd['n']
-  let paste#paste_cmd['i'] = 'x<BS><Esc>' . paste#paste_cmd['n'] . 'gi'
-
-  func! paste#Paste()
-    let ove = &ve
-    set ve=all
-    normal! `^
-    if @+ != ''
-      normal! "+gP
-    endif
-    let c = col(".")
-    normal! i
-    if col(".") < c " compensate for i<ESC> moving the cursor left
-      normal! l
-    endif
-    let &ve = ove
-  endfunc
-else
-  let paste#paste_cmd = {'n': "\"=@+.'xy'<CR>gPFx\"_2x"}
-  let paste#paste_cmd['v'] = '"-c<Esc>gix<Esc>' . paste#paste_cmd['n'] . '"_x'
-  let paste#paste_cmd['i'] = 'x<Esc>' . paste#paste_cmd['n'] . '"_s'
-endi
-
+set lines=40 columns=130
+colorscheme railscasts
