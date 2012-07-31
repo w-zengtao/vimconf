@@ -51,6 +51,8 @@ syntax on
 " 去掉工具栏
 set go-=T
 
+" 按ctrl+s保存文件
+nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
 
 " 回到上次编辑的地方
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -67,19 +69,19 @@ map <C-l> <C-W>l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 " 获得当前目录
-function! CurrectDir()
-return substitute(getcwd(), "", "", "g")
-endfunction
+" function! CurrectDir()
+" return substitute(getcwd(), "", "", "g")
+" endfunction
  
 " 返回当前时间
-func! GetTimeInfo()
-return strftime('%Y-%m-%d %A %H:%M:%S')
-endfunction
+" func! GetTimeInfo()
+" return strftime('%Y-%m-%d %A %H:%M:%S')
+" endfunction
  
 " 命令行于状态行
-set ch=1
-set statusline=\ [File]\ %F%m%r%h%y[%{&fileformat},%{&fileencoding}]\ %w\ \ [PWD]\ %r%{CurrectDir()}%h\ %=\ [Line]%l/%L\ %=\[%P]
-set ls=2 " 始终显示状态行
+" set ch=1
+" set statusline=\ [File]\ %F%m%r%h%y[%{&fileformat},%{&fileencoding}]\ %w\ \ [PWD]\ %r%{CurrectDir()}%h\ %=\ [Line]%l/%L\ %=\[%P]
+" set ls=2 " 始终显示状态行
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                       括号补全
@@ -144,8 +146,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 
-" nmap ,n :NERDTree<CR>
-" nmap ri :NERDTreeFind<CR>
+nmap ,n :NERDTree<CR>
+nmap ri :NERDTreeFind<CR>
 
 Bundle 'gmarik/vundle'
 Bundle 'mattn/zencoding-vim'
@@ -186,6 +188,19 @@ Bundle 'spf13/vim-markdown'
 Bundle 'spf13/vim-preview'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Puppet-Syntax-Highlighting'
+Bundle 'Lokaltog/vim-powerline'
+
+    if has('statusline')
+        set laststatus=2
+
+        " Broken down into easily includeable segments
+        set statusline=%<%f\    " Filename
+        set statusline+=%w%h%m%r " Options
+        set statusline+=%{fugitive#statusline()} "  Git Hotness
+        set statusline+=\ [%{&ff}/%Y]            " filetype
+        set statusline+=\ [%{getcwd()}]          " current dir
+        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+    endif
 
 
 if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
@@ -223,6 +238,7 @@ map <leader>et :tabe %%
         \ 'dir':  '\.git$\|\.hg$\|\.svn$',
         \ 'file': '\.exe$\|\.so$\|\.dll$' }
     let g:ctrlp_working_path_mode = 0
+    let g:ctrlp_max_height = 20
  "}
 " Fugitive {
     nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -236,5 +252,24 @@ map <leader>et :tabe %%
 " ack插件设置
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-set lines=40 columns=130
-colorscheme railscasts
+set background=dark
+colorscheme solarized
+set linespace=2
+
+if has("gui_macvim")
+  set guifont=Monaco:h17
+elseif has("gui_gtk")
+  set guifont=Monospace\ 13
+else
+  set guifont=Monaco:h17
+end
+
+"Ctrl-c to copy in + buffer from visual mode
+vmap <C-c> "+y
+
+"Ctrl-p to paste from the + register in cmd mode
+map <C-x> "+p
+
+"Ctrl-p to paste from the + register while editing
+imap <C-x> <esc><C-x>
+
