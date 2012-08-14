@@ -26,6 +26,18 @@ set autoread
 set nobackup
 set noswapfile
 set nowritebackup
+
+set list
+" list chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as " ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the
+                                  " right of the screen
+set listchars+=precedes:<         " The character to show in the last column when
+                                  " wrap is off and the line continues beyond
+                                  " theright of the screen
  
 " 启动的时候不显示那个援助索马里儿童的提示
 set shortmess=atI
@@ -273,4 +285,5 @@ map <C-x> "+p
 
 "Ctrl-p to paste from the + register while editing
 imap <C-x> <esc><C-x>
+
 
