@@ -189,6 +189,7 @@ Bundle 'spf13/vim-preview'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'jeetsukumaran/vim-buffergator'
 
     if has('statusline')
         set laststatus=2
@@ -231,7 +232,7 @@ map <leader>et :tabe %%
      nmap <leader>ss :SessionSave<CR>
   " }
 " Buffer explorer {
-    nmap <leader>b :BufExplorer<CR>
+    nmap <leader>ob :BufExplorer<CR>
  " }
  " ctrlp {
     let g:ctrlp_custom_ignore = {
