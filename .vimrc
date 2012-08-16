@@ -11,17 +11,17 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set softtabstop=2
- 
+
 " 缩进
 set autoindent
 set smartindent
- 
+
 " 设置一行最多80个字符
 set textwidth=80
-   
+
 " 自动重新读入
 set autoread
- 
+
 " 备份和缓存   
 set nobackup
 set noswapfile
@@ -38,25 +38,25 @@ set listchars+=extends:>          " The character to show in the last column whe
 set listchars+=precedes:<         " The character to show in the last column when
                                   " wrap is off and the line continues beyond
                                   " theright of the screen
- 
+
 " 启动的时候不显示那个援助索马里儿童的提示
 set shortmess=atI
- 
+
 " 搜索时忽略大小写
 set ignorecase
 set smartcase
- 
+
 " 设置编码
 set encoding=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
- 
+
 " 高亮当前行
 " set cursorline
 
 "修改 vmirc 后自动生效
 map <leader>s :source ~/.vimrc<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
- 
+
 " 保证语法高亮
 syntax on
 
@@ -79,17 +79,17 @@ map <C-l> <C-W>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                       设置状态行
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 " 获得当前目录
 " function! CurrectDir()
 " return substitute(getcwd(), "", "", "g")
 " endfunction
- 
+
 " 返回当前时间
 " func! GetTimeInfo()
 " return strftime('%Y-%m-%d %A %H:%M:%S')
 " endfunction
- 
+
 " 命令行于状态行
 " set ch=1
 " set statusline=\ [File]\ %F%m%r%h%y[%{&fileformat},%{&fileencoding}]\ %w\ \ [PWD]\ %r%{CurrectDir()}%h\ %=\ [Line]%l/%L\ %=\[%P]
@@ -126,7 +126,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                       插件设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 "字典文件设置
 " au FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
 " au FileType css setlocal dict+=~/.vim/dict/css.dict
@@ -142,7 +142,7 @@ endif
 " au FileType ocaml setlocal dict+=~/.vim/dict/ocaml.dict
 "设置taglist快捷键
 nnoremap <silent> <F8> :TlistToggle<CR>
-   
+
 "python自动完成
 " let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
 
@@ -169,7 +169,7 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 "Bundle "snipmate-snippets"
-" Bundle "honza/snipmate-snippets"
+"Bundle "honza/snipmate-snippets"
 " Bundle "garbas/vim-snipmate"
 Bundle 'garbas/vim-snipmate'
 Bundle 'spf13/snipmate-snippets'
@@ -202,18 +202,21 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'tpope/vim-endwise.git'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-ragtag'
 
-    if has('statusline')
-        set laststatus=2
+if has('statusline')
+    set laststatus=2
 
-        " Broken down into easily includeable segments
-        set statusline=%<%f\    " Filename
-        set statusline+=%w%h%m%r " Options
-        set statusline+=%{fugitive#statusline()} "  Git Hotness
-        set statusline+=\ [%{&ff}/%Y]            " filetype
-        set statusline+=\ [%{getcwd()}]          " current dir
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-    endif
+    " Broken down into easily includeable segments
+    set statusline=%<%f\    " Filename
+    set statusline+=%w%h%m%r " Options
+    set statusline+=%{fugitive#statusline()} "  Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " filetype
+    set statusline+=\ [%{getcwd()}]          " current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
 
 
 if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
@@ -281,9 +284,9 @@ end
 vmap <C-c> "+y
 
 "Ctrl-p to paste from the + register in cmd mode
-map <C-x> "+p
+map <C-b> "+p
 
 "Ctrl-p to paste from the + register while editing
-imap <C-x> <esc><C-x>
+imap <C-b> <esc><C-b>
 
 
