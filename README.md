@@ -3,9 +3,6 @@ gvimrc
 
 the configuration file for vim on ubuntu 12.04
 ----------------------------------------------
-
-## Quick start
-
 1. 安装所需要的ctags和grep-ack
 
   ```

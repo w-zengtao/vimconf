@@ -1,10 +1,10 @@
 set nocompatible
 filetype plugin indent on
- 
+
 " 显示行号
 set number
 let mapleader = ','
- 
+
 " 设置四个空格对齐
 set tabstop=2
 set expandtab
@@ -22,7 +22,7 @@ set textwidth=80
 " 自动重新读入
 set autoread
 
-" 备份和缓存   
+" 备份和缓存
 set nobackup
 set noswapfile
 set nowritebackup
@@ -40,7 +40,7 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " theright of the screen
 
 " 启动的时候不显示那个援助索马里儿童的提示
-set shortmess=atI
+"set shortmess=atI
 
 " 搜索时忽略大小写
 set ignorecase
@@ -54,8 +54,8 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 " set cursorline
 
 "修改 vmirc 后自动生效
-map <leader>s :source ~/.vimrc<cr>
-autocmd! bufwritepost .vimrc source ~/.vimrc
+"map <leader>s :source ~/.vimrc<cr>
+"autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " 保证语法高亮
 syntax on
@@ -64,7 +64,9 @@ syntax on
 set go-=T
 
 " 按ctrl+s保存文件
-nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
+"nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
+inoremap <C-s> <ESC>:w<CR>
+nnoremap <C-s> :w<CR>
 
 " 回到上次编辑的地方
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -201,7 +203,7 @@ Bundle 'spf13/vim-preview'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'jeetsukumaran/vim-buffergator'
+" Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-ragtag'
@@ -247,7 +249,7 @@ map <leader>et :tabe %%
      nmap <leader>ss :SessionSave<CR>
   " }
 " Buffer explorer {
-    nmap <leader>ob :BufExplorer<CR>
+    nmap <leader>b :BufExplorer<CR>
  " }
  " ctrlp {
     let g:ctrlp_custom_ignore = {
