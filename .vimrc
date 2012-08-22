@@ -11,7 +11,6 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set softtabstop=2
-
 " 缩进
 set autoindent
 set smartindent
@@ -124,7 +123,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-ragtag'
 Bundle 'godlygeek/tabular'
 Bundle 'Shougo/neocomplcache.git'
-
+Bundle 'jamescarr/snipmate-nodejs'
 " statusline {
     if has('statusline')
         set laststatus=2
@@ -246,9 +245,9 @@ Bundle 'Shougo/neocomplcache.git'
 
 " map {
     vmap <C-c> "+y
-    map <C-b> "+p
+    map <C-b> "+gP
     imap <C-b> <esc><C-b>
-
+    map <C-a> ggVG
     cnoremap %% <C-R>=expand('%:h').'/'<cr>
     map <leader>ew :e %%
     map <leader>es :sp %%
@@ -263,5 +262,4 @@ Bundle 'Shougo/neocomplcache.git'
     map <C-h> <C-W>h
     map <C-l> <C-W>l
 " }
-
 
