@@ -50,7 +50,7 @@ set encoding=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
 " 高亮当前行
-" set cursorline
+"set cursorline
 
 "修改 vmirc 后自动生效
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -112,7 +112,7 @@ Bundle 'taxilian/vim-web-indent'
 Bundle 'HTML-AutoCloseTag'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'spf13/vim-markdown'
-Bundle 'spf13/vim-preview'
+"Bundle 'spf13/vim-preview'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'Lokaltog/vim-powerline'
@@ -123,7 +123,17 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-ragtag'
 Bundle 'godlygeek/tabular'
 Bundle 'Shougo/neocomplcache.git'
+" Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'jamescarr/snipmate-nodejs'
+"Bundle 'statianzo/vim-jade'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'ap/vim-css-color'
+Bundle 'ervandew/supertab'
+Bundle 'wavded/vim-stylus'
+Bundle 'nono/jquery.vim'
+Bundle 'bbommarito/vim-slim'
+Bundle 'tmhedberg/matchit'
 " statusline {
     if has('statusline')
         set laststatus=2
@@ -162,8 +172,9 @@ Bundle 'jamescarr/snipmate-nodejs'
     nmap ,n :NERDTree<CR>
     nmap ri :NERDTreeFind<CR>
     " 打开就开启NERDTree
-    " autocmd vimenter * if !argc() | NERDTree | endif
+    "autocmd vimenter * if !argc() | NERDTree | endif
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+    let NERDTreeWinSize=22
 " }
 " Session List {
      set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
@@ -225,14 +236,23 @@ Bundle 'jamescarr/snipmate-nodejs'
     " Use underbar completion.
     "let g:neocomplcache_enable_underbar_completion = 1
 " }
+
+" nerdcommenter {
+    let NERDSpaceDelims=1
+" }
+
 " ack {
     let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 " }
 
 " color {
     set background=dark
-    colorscheme solarized
-    set linespace=2
+    if has("gui_running")
+      colorscheme solarized
+      set linespace=2
+      set lines=31
+      set columns=100
+    endif
 
     if has("gui_macvim")
       set guifont=Monaco:h17
@@ -257,9 +277,23 @@ Bundle 'jamescarr/snipmate-nodejs'
     "nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
     inoremap <C-s> <ESC>:w<CR>
     nnoremap <C-s> :w<CR>
+    inoremap <C-d> <ESC>:bdelete<CR>
+    nnoremap <C-d> :bdelete<CR>
+    map <leader>n :bnext<CR>
+    map <leader>p :bprevious<CR>
+    set hidden "in order to switch between buffers with unsaved change
+    map <s-tab> :bp<cr>
+    map <tab> :bn<cr>
     map <C-j> <C-W>j
     map <C-k> <C-W>k
     map <C-h> <C-W>h
     map <C-l> <C-W>l
 " }
 
+" syntax {
+    au BufNewFile,BufRead *.jade set filetype=jade
+    au BufNewFile,BufRead *.coffee set filetype=coffee
+    au BufNewFile,BufRead *.less set filetype=less
+    au BufNewFile,BufRead *.slim set filetype=slim
+    au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+"}
