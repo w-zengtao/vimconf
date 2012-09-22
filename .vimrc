@@ -134,6 +134,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'nono/jquery.vim'
 Bundle 'bbommarito/vim-slim'
 Bundle 'tmhedberg/matchit'
+Bundle 'thinca/vim-fontzoom'
 " statusline {
     if has('statusline')
         set laststatus=2
