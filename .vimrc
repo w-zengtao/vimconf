@@ -26,6 +26,8 @@ set nobackup
 set noswapfile
 set nowritebackup
 
+set hlsearch
+
 set list
 " list chars
 set listchars=""                  " Reset the listchars
@@ -289,6 +291,9 @@ Bundle 'thinca/vim-fontzoom'
     map <C-k> <C-W>k
     map <C-h> <C-W>h
     map <C-l> <C-W>l
+    map <leader>gr :split config/routes.rb<cr>
+    map <leader>gg :split Gemfile<cr>
+    map <F5> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
 " }
 
 " syntax {
