@@ -1,27 +1,27 @@
 set nocompatible
 filetype plugin indent on
 
-" æ˜¾ç¤ºè¡Œå·
+" ÏÔÊ¾ĞĞºÅ
 set number
 let mapleader = ','
 
-" è®¾ç½®å››ä¸ªç©ºæ ¼å¯¹é½
+" ÉèÖÃËÄ¸ö¿Õ¸ñ¶ÔÆë
 set tabstop=2
 set expandtab
 set smarttab
 set shiftwidth=2
 set softtabstop=2
-" ç¼©è¿›
+" Ëõ½ø
 set autoindent
 set smartindent
 
-" è®¾ç½®ä¸€è¡Œæœ€å¤š80ä¸ªå­—ç¬¦
+" ÉèÖÃÒ»ĞĞ×î¶à80¸ö×Ö·û
 set textwidth=80
 
-" è‡ªåŠ¨é‡æ–°è¯»å…¥
+" ×Ô¶¯ÖØĞÂ¶ÁÈë
 set autoread
 
-" å¤‡ä»½å’Œç¼“å­˜
+" ±¸·İºÍ»º´æ
 set nobackup
 set noswapfile
 set nowritebackup
@@ -40,40 +40,40 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " wrap is off and the line continues beyond
                                   " theright of the screen
 
-" å¯åŠ¨çš„æ—¶å€™ä¸æ˜¾ç¤ºé‚£ä¸ªæ´åŠ©ç´¢é©¬é‡Œå„¿ç«¥çš„æç¤º
+" Æô¶¯µÄÊ±ºò²»ÏÔÊ¾ÄÇ¸öÔ®ÖúË÷ÂíÀï¶ùÍ¯µÄÌáÊ¾
 set shortmess=atI
 
-" æœç´¢æ—¶å¿½ç•¥å¤§å°å†™
+" ËÑË÷Ê±ºöÂÔ´óĞ¡Ğ´
 set ignorecase
 set smartcase
 
-" è®¾ç½®ç¼–ç 
+" ÉèÖÃ±àÂë
 set encoding=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
-" é«˜äº®å½“å‰è¡Œ
+" ¸ßÁÁµ±Ç°ĞĞ
 "set cursorline
 
-"ä¿®æ”¹ vmirc åè‡ªåŠ¨ç”Ÿæ•ˆ
+"ĞŞ¸Ä vmirc ºó×Ô¶¯ÉúĞ§
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-" ä¿è¯è¯­æ³•é«˜äº®
+" ±£Ö¤Óï·¨¸ßÁÁ
 syntax on
 
-" å»æ‰å·¥å…·æ 
+" È¥µô¹¤¾ßÀ¸
 set go-=T
 
 
-" å›åˆ°ä¸Šæ¬¡ç¼–è¾‘çš„åœ°æ–¹
+" »Øµ½ÉÏ´Î±à¼­µÄµØ·½
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-" pythonè‡ªåŠ¨å®Œæˆ {
+" python×Ô¶¯Íê³É {
 " let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
 " }
 
 " call pathogen#infect()
 
-" vundleæ’ä»¶è®¾ç½® {
+" vundle²å¼şÉèÖÃ {
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
 " }
@@ -163,7 +163,7 @@ Bundle 'thinca/vim-fontzoom'
 " }
 
 " Taglist {
-    "è®¾ç½®taglistå¿«æ·é”®
+    "ÉèÖÃtaglist¿ì½İ¼ü
     nnoremap <silent> <F8> :TlistToggle<CR>
 " }
 
@@ -174,7 +174,7 @@ Bundle 'thinca/vim-fontzoom'
     let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
     nmap ,n :NERDTree<CR>
     nmap ri :NERDTreeFind<CR>
-    " æ‰“å¼€å°±å¼€å¯NERDTree
+    " ´ò¿ª¾Í¿ªÆôNERDTree
     "autocmd vimenter * if !argc() | NERDTree | endif
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     let NERDTreeWinSize=22
@@ -276,7 +276,7 @@ Bundle 'thinca/vim-fontzoom'
     map <leader>es :sp %%
     map <leader>ev :vsp %%
     map <leader>et :tabe %%
-    " æŒ‰ctrl+sä¿å­˜æ–‡ä»¶
+    " °´ctrl+s±£´æÎÄ¼ş
     "nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
     inoremap <C-s> <ESC>:w<CR>
     nnoremap <C-s> :w<CR>
@@ -302,4 +302,12 @@ Bundle 'thinca/vim-fontzoom'
     au BufNewFile,BufRead *.less set filetype=less
     au BufNewFile,BufRead *.slim set filetype=slim
     au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+"}
+
+" gb2312 encoding configuration {
+    " set encoding=gb2312
+    " set fileencoding=chinese
+    " set fileencodings=chinese,ucs-bom,utf-8
+    " set formatoptions+=mM
+    " set ambiwidth=double
 "}
