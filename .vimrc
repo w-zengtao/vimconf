@@ -260,7 +260,7 @@ Bundle 'thinca/vim-fontzoom'
     if has("gui_macvim")
       set guifont=Monaco:h17
     elseif has("gui_gtk")
-      set guifont=Monospace\ 13
+      set guifont=Monospace\ 12
     else
       set guifont=Monaco:h17
     end
