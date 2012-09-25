@@ -276,6 +276,7 @@ Bundle 'thinca/vim-fontzoom'
     map <leader>es :sp %%
     map <leader>ev :vsp %%
     map <leader>et :tabe %%
+    map <leader>zf zf%
     " 按ctrl+s保存文件
     "nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
     inoremap <C-s> <ESC>:w<CR>
