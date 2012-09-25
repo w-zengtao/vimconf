@@ -253,7 +253,7 @@ Bundle 'thinca/vim-fontzoom'
     if has("gui_running")
       colorscheme solarized
       set linespace=2
-      set lines=31
+      set lines=35
       set columns=100
     endif
 
