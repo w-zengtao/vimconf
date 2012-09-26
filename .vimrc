@@ -137,18 +137,24 @@ Bundle 'nono/jquery.vim'
 Bundle 'bbommarito/vim-slim'
 Bundle 'tmhedberg/matchit'
 Bundle 'thinca/vim-fontzoom'
-" statusline {
-    if has('statusline')
-        set laststatus=2
+Bundle 'anzaika/go.vim'
 
-        " Broken down into easily includeable segments
-        set statusline=%<%f\    " Filename
-        set statusline+=%w%h%m%r " Options
-        set statusline+=%{fugitive#statusline()} "  Git Hotness
-        set statusline+=\ [%{&ff}/%Y]            " filetype
-        set statusline+=\ [%{getcwd()}]          " current dir
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-    endif
+set laststatus=2
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_stl_path_style = 'full'
+set t_Co=256
+" statusline {
+    " if has('statusline')
+        " set laststatus=2
+
+        " " Broken down into easily includeable segments
+        " set statusline=%<%f\    " Filename
+        " set statusline+=%w%h%m%r " Options
+        " set statusline+=%{fugitive#statusline()} "  Git Hotness
+        " set statusline+=\ [%{&ff}/%Y]            " filetype
+        " set statusline+=\ [%{getcwd()}]          " current dir
+        " set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+    " endif
 " }
 " snippet{
     if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
@@ -175,9 +181,11 @@ Bundle 'thinca/vim-fontzoom'
     nmap ,n :NERDTree<CR>
     nmap ri :NERDTreeFind<CR>
     " 打开就开启NERDTree
-    "autocmd vimenter * if !argc() | NERDTree | endif
+    autocmd vimenter * if !argc() | NERDTree | endif
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     let NERDTreeWinSize=22
+    let NERDTreeQuitOnOpen=1
+    let NERDTreeShowHidden=1
 " }
 " Session List {
      set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
@@ -295,6 +303,7 @@ Bundle 'thinca/vim-fontzoom'
     map <leader>gr :split config/routes.rb<cr>
     map <leader>gg :split Gemfile<cr>
     map <F5> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
+    map <F4> :set nolist<CR>
 " }
 
 " syntax {
@@ -303,6 +312,7 @@ Bundle 'thinca/vim-fontzoom'
     au BufNewFile,BufRead *.less set filetype=less
     au BufNewFile,BufRead *.slim set filetype=slim
     au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+    au BufRead,BufNewFile *.go set filetype=go
 "}
 
 " gb2312 encoding configuration {
@@ -312,3 +322,4 @@ Bundle 'thinca/vim-fontzoom'
     " set formatoptions+=mM
     " set ambiwidth=double
 "}
+
