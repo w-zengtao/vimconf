@@ -290,8 +290,8 @@ set t_Co=256
     "nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
     inoremap <C-s> <ESC>:w<CR>
     nnoremap <C-s> :w<CR>
-    inoremap <C-d> <ESC>:bdelete<CR>
-    nnoremap <C-d> :bdelete<CR>
+    " inoremap <C-d> <ESC>:bdelete<CR>
+    " nnoremap <C-d> :bdelete<CR>
     map <leader>n :bnext<CR>
     map <leader>p :bprevious<CR>
     set hidden "in order to switch between buffers with unsaved change
