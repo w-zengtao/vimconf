@@ -259,7 +259,8 @@ set t_Co=256
 " color {
     set background=dark
     if has("gui_running")
-      colorscheme solarized
+      " colorscheme solarized
+      colorscheme mod_tcsoft
       set linespace=2
       set lines=35
       set columns=100
@@ -302,7 +303,7 @@ set t_Co=256
     map <C-l> <C-W>l
     map <leader>gr :split config/routes.rb<cr>
     map <leader>gg :split Gemfile<cr>
-    map <F5> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
+    map <F6> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
     map <F4> :set nolist<CR>
 " }
 
