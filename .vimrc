@@ -309,6 +309,7 @@ let g:Powerline_stl_path_style = 'full'
     map <leader>gg :split Gemfile<cr>
     map <F6> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
     map <F4> :set nolist<CR>
+    set pastetoggle=<F2>
 " }
 
 " syntax {
