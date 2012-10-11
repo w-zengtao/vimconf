@@ -259,12 +259,13 @@ let g:Powerline_stl_path_style = 'full'
     set t_Co=256
     set background=dark
     if has("gui_running")
-      " colorscheme solarized
-      colorscheme zenburn
+      colorscheme solarized
       " colorscheme mod_tcsoft
       set linespace=2
       set lines=35
       set columns=100
+    else
+      colorscheme zenburn
     endif
 
     if has("gui_macvim")
@@ -296,8 +297,10 @@ let g:Powerline_stl_path_style = 'full'
     map <leader>n :bnext<CR>
     map <leader>p :bprevious<CR>
     set hidden "in order to switch between buffers with unsaved change
-    map <s-tab> :bp<cr>
-    map <tab> :bn<cr>
+    " map <s-tab> :bp<cr>
+    " map <tab> :bn<cr>
+    map <tab> :tabNext<cr>
+    map <C-n> :tabnew<cr>
     map <C-j> <C-W>j
     map <C-k> <C-W>k
     map <C-h> <C-W>h
