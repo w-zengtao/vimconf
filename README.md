@@ -1,8 +1,6 @@
 gvimrc
 ======
 
-![vim screenshot](https://raw.github.com/yinsigan/gvimrc/master/screenshots/example.png)
-
 1. 安装所需要的ctags和grep-ack
 
   ```
