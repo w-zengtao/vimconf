@@ -27,6 +27,8 @@ set noswapfile
 set nowritebackup
 
 " set hlsearch
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
 
 set list
 " list chars
@@ -310,8 +312,6 @@ let g:Powerline_stl_path_style = 'full'
     map <F4> :set nolist<CR>
     set pastetoggle=<F2>
 
-    set noeb vb t_vb=
-    au GUIEnter * set vb t_vb=
 " }
 
 " syntax {
