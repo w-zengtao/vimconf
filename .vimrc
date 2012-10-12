@@ -289,17 +289,16 @@ let g:Powerline_stl_path_style = 'full'
     map <leader>et :tabe %%
     map <leader>zf zf%
     " 按ctrl+s保存文件
-    "nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
+    " nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
     inoremap <C-s> <ESC>:w<CR>
     nnoremap <C-s> :w<CR>
     inoremap <C-d> <ESC>:bdelete<CR>
     nnoremap <C-d> :bdelete<CR>
-    map <leader>n :bnext<CR>
-    map <leader>p :bprevious<CR>
+    " map <leader>p :bprevious<CR>
+    map <leader>p :tabprevious<CR>
     set hidden "in order to switch between buffers with unsaved change
     " map <s-tab> :bp<cr>
-    " map <tab> :bn<cr>
-    map <tab> :tabNext<cr>
+    map <tab> :bn<cr>
     map <C-n> :tabnew<cr>
     map <C-j> <C-W>j
     map <C-k> <C-W>k
@@ -310,6 +309,9 @@ let g:Powerline_stl_path_style = 'full'
     map <F6> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
     map <F4> :set nolist<CR>
     set pastetoggle=<F2>
+
+    set noeb vb t_vb=
+    au GUIEnter * set vb t_vb=
 " }
 
 " syntax {
