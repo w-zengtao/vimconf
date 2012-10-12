@@ -30,6 +30,8 @@ set nowritebackup
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
+set mouse=a
+
 set list
 " list chars
 set listchars=""                  " Reset the listchars
