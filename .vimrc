@@ -146,6 +146,7 @@ Bundle 'anzaika/go.vim'
 Bundle 'mbbill/undotree'
 Bundle "myusuf3/numbers.vim"
 Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'snipmate-snippets'
 " Bundle 'honza/snipmate-snippets'
 " Bundle 'garbas/vim-snipmate'
