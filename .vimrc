@@ -109,7 +109,6 @@ Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
 Bundle "othree/xml.vim"
-Bundle "tpope/vim-commentary"
 Bundle 'vim-scripts/sessionman.vim'
 Bundle 'corntrace/bufexplorer'
 Bundle 'altercation/vim-colors-solarized'
@@ -156,6 +155,7 @@ Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'vim-scripts/AutoComplPop.git'
 " Bundle 'spf13/vim-preview'
 " Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'tpope/vim-commentary'
 
 " snippet
   if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
