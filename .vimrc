@@ -146,6 +146,7 @@ Bundle 'mbbill/undotree'
 Bundle "myusuf3/numbers.vim"
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'kien/tabman.vim'
 " Bundle 'snipmate-snippets'
 " Bundle 'honza/snipmate-snippets'
 " Bundle 'garbas/vim-snipmate'
@@ -273,6 +274,7 @@ Bundle 'Lokaltog/vim-easymotion'
   end
 
 " map
+
   " copy
   vmap <C-c> "+y
   map <C-a> ggVG
@@ -296,13 +298,9 @@ Bundle 'Lokaltog/vim-easymotion'
   inoremap <C-d> <ESC>:bdelete<CR>
   nnoremap <C-d> :bdelete<CR>
 
-  " map <leader>p :bprevious<CR>
-  map <leader>p :tabprevious<CR>
   set hidden "in order to switch between buffers with unsaved change
-  " map <s-tab> :bp<cr>
-  map <tab> :bn<cr>
 
-  " table
+  " tab
   map <C-n> :tabnew<cr>
 
   " windows key control
@@ -358,6 +356,7 @@ Bundle 'Lokaltog/vim-easymotion'
   " endif
 
 " title
+  set title
   set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70"
 
 " numbers.vim
