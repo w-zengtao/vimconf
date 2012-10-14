@@ -17,6 +17,8 @@ set smartindent
 
 set nowrap
 
+set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags
+
 set fdm=indent
 
 " fix backspace delete
@@ -141,6 +143,7 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'tmhedberg/matchit'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'anzaika/go.vim'
+Bundle 'mbbill/undotree'
 " Bundle 'snipmate-snippets'
 " Bundle 'honza/snipmate-snippets'
 " Bundle 'garbas/vim-snipmate'
@@ -254,7 +257,8 @@ Bundle 'anzaika/go.vim'
     set lines=35
     set columns=100
   else
-    colorscheme zenburn
+    " colorscheme zenburn
+    colorscheme molokai
   endif
 
   if has("gui_macvim")
@@ -266,10 +270,8 @@ Bundle 'anzaika/go.vim'
   end
 
 " map
-  " copy and paste
+  " copy
   vmap <C-c> "+y
-  map <C-b> "+gP
-  imap <C-b> <esc><C-b>
   map <C-a> ggVG
   cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
