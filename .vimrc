@@ -144,6 +144,7 @@ Bundle 'tmhedberg/matchit'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'anzaika/go.vim'
 Bundle 'mbbill/undotree'
+Bundle "myusuf3/numbers.vim"
 " Bundle 'snipmate-snippets'
 " Bundle 'honza/snipmate-snippets'
 " Bundle 'garbas/vim-snipmate'
@@ -356,3 +357,8 @@ Bundle 'mbbill/undotree'
 
 " title
   set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70"
+
+" numbers.vim
+  " nnoremap <F3> :NumbersToggle<CR>
+" undotree
+  " nnoremap <F5> :UndotreeToggle<cr>
