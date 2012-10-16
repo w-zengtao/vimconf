@@ -1,0 +1,31 @@
+" map
+  vmap <C-c> "+y
+  map <C-a> ggVG
+  cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+  map <leader>ew :e %%
+  map <leader>es :sp %%
+  map <leader>ev :vsp %%
+  map <leader>et :tabe %%
+  map <leader>zf zf%
+
+  inoremap <C-s> <ESC>:w<CR>
+  nnoremap <C-s> :w<CR>
+
+  set hidden
+
+  map <C-n> :tabnew<cr>
+
+  map <C-j> <C-W>j
+  map <C-k> <C-W>k
+  map <C-h> <C-W>h
+  map <C-l> <C-W>l
+
+  map <F6> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
+
+  nnoremap <F2> :set invpaste paste?<CR>
+  set pastetoggle=<F2>
+
+  nmap <silent> ,/ :nohlsearch<CR>
+
+  " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle

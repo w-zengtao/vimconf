@@ -1,0 +1,94 @@
+" snippet
+  if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+    source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+  endif
+
+" AutoCloseTag
+  au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
+
+" Taglist
+  nnoremap <silent> <F8> :TlistToggle<CR> nmap <Leader>ac <Plug>ToggleAutoCloseMappings
+
+" NerdTree
+  map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+  map <leader>e :NERDTreeFind<CR>
+  nmap <leader>nt :NERDTreeFind<CR>
+  let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+  nmap ,n :NERDTree<CR>
+  nmap ri :NERDTreeFind<CR>
+  autocmd vimenter * if !argc() | NERDTree | endif
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  let NERDTreeWinSize=30
+  let NERDTreeQuitOnOpen=0
+  let NERDTreeShowHidden=1
+
+" Session List
+  set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+  nmap <leader>sl :SessionList<CR>
+  nmap <leader>ss :SessionSave<CR>
+
+" Buffer explorer
+  nmap <leader>b :BufExplorer<CR>
+
+" ctrlp
+  let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$' }
+  let g:ctrlp_working_path_mode = 0
+  let g:ctrlp_max_height = 20
+
+" Fugitive
+  nnoremap <silent> <leader>gs :Gstatus<CR>
+  nnoremap <silent> <leader>gd :Gdiff<CR>
+  nnoremap <silent> <leader>gc :Gcommit<CR>
+  nnoremap <silent> <leader>gb :Gblame<CR>
+  nnoremap <silent> <leader>gl :Glog<CR>
+  nnoremap <silent> <leader>gp :Git push<CR>
+
+" Tabularize
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:<CR>
+  vmap <Leader>a: :Tabularize /:<CR>
+  nmap <Leader>a:: :Tabularize /:\zs<CR>
+  vmap <Leader>a:: :Tabularize /:\zs<CR>
+  nmap <Leader>a, :Tabularize /,<CR>
+  vmap <Leader>a, :Tabularize /,<CR>
+  nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+  vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+
+" nerdcommenter
+  let NERDSpaceDelims=1
+
+" ack
+  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" statusline
+  set laststatus=2
+  let g:Powerline_symbols = 'unicode'
+  let g:Powerline_stl_path_style = 'full'
+
+" indent_guides
+  let g:indent_guides_auto_colors = 0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121   ctermbg=3
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=4
+  set ts=2 sw=2 et
+  let g:indent_guides_start_level = 2
+  let g:indent_guides_guide_size = 1
+  let g:indent_guides_enable_on_vim_startup = 0
+
+" syntax
+  au BufNewFile,BufRead *.jade set filetype=jade
+  au BufNewFile,BufRead *.coffee set filetype=coffee
+  au BufNewFile,BufRead *.less set filetype=less
+  au BufNewFile,BufRead *.slim set filetype=slim
+  au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+  au BufRead,BufNewFile *.go set filetype=go
+  au BufRead,BufNewFile *.sass set filetype=css
+
+" neocomplecache
+  " let g:neocomplcache_enable_at_startup = 1
+  " let g:neocomplcache_enable_auto_select = 1
+  " let g:neocomplcache_enable_smart_case = 1
+  " let g:neocomplcache_enable_camel_case_completion = 1
+  " let g:neocomplcache_enable_underbar_completion = 1
