@@ -1,17 +1,17 @@
 set nocompatible
 filetype plugin indent on
 
-" ÏÔÊ¾ĞĞºÅ
+" æ˜¾ç¤ºè¡Œå·
 set number
 let mapleader = ','
 
-" ÉèÖÃËÄ¸ö¿Õ¸ñ¶ÔÆë
+" è®¾ç½®å››ä¸ªç©ºæ ¼å¯¹é½
 set tabstop=2
 set expandtab
 set smarttab
 set shiftwidth=2
 set softtabstop=2
-" Ëõ½ø
+" ç¼©è¿›
 set autoindent
 set smartindent
 
@@ -21,17 +21,20 @@ set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags
 
 set fdm=indent
 
+set wildmenu
+set wildmode=list:longest,full
+
 " fix backspace delete
 inoremap <BS> <Left><Del>
 set whichwrap+=[
 
-" ÉèÖÃÒ»ĞĞ×î¶à80¸ö×Ö·û
+" è®¾ç½®ä¸€è¡Œæœ€å¤š80ä¸ªå­—ç¬¦
 set textwidth=80
 
-" ×Ô¶¯ÖØĞÂ¶ÁÈë
+" è‡ªåŠ¨é‡æ–°è¯»å…¥
 set autoread
 
-" ±¸·İºÍ»º´æ
+" å¤‡ä»½å’Œç¼“å­˜
 set nobackup
 set noswapfile
 set nowritebackup
@@ -56,39 +59,39 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " wrap is off and the line continues beyond
                                   " theright of the screen
 
-" Æô¶¯µÄÊ±ºò²»ÏÔÊ¾ÄÇ¸öÔ®ÖúË÷ÂíÀï¶ùÍ¯µÄÌáÊ¾
+" å¯åŠ¨çš„æ—¶å€™ä¸æ˜¾ç¤ºé‚£ä¸ªæ´åŠ©ç´¢é©¬é‡Œå„¿ç«¥çš„æç¤º
 set shortmess=atI
 
-" ËÑË÷Ê±ºöÂÔ´óĞ¡Ğ´
+" æœç´¢æ—¶å¿½ç•¥å¤§å°å†™
 set ignorecase
 set smartcase
 
-" ÉèÖÃ±àÂë
+" è®¾ç½®ç¼–ç 
 set encoding=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
-" ¸ßÁÁµ±Ç°ĞĞ
+" é«˜äº®å½“å‰è¡Œ
 "set cursorline
 
-"ĞŞ¸Ä vmirc ºó×Ô¶¯ÉúĞ§
+"ä¿®æ”¹ vmirc åè‡ªåŠ¨ç”Ÿæ•ˆ
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-" ±£Ö¤Óï·¨¸ßÁÁ
+" ä¿è¯è¯­æ³•é«˜äº®
 syntax on
 
-" È¥µô¹¤¾ßÀ¸
+" å»æ‰å·¥å…·æ 
 set go-=T
 
 
-" »Øµ½ÉÏ´Î±à¼­µÄµØ·½
+" å›åˆ°ä¸Šæ¬¡ç¼–è¾‘çš„åœ°æ–¹
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-" python×Ô¶¯Íê³É
-  let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
+" pythonè‡ªåŠ¨å®Œæˆ
+  " let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
 
 " call pathogen#infect()
 
-" vundle²å¼şÉèÖÃ
+" vundleæ’ä»¶è®¾ç½®
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
 
@@ -169,7 +172,7 @@ Bundle 'kien/tabman.vim'
   nmap <Leader>ac <Plug>ToggleAutoCloseMappings
 
 " Taglist
-  "ÉèÖÃtaglist¿ì½İ¼ü
+  "è®¾ç½®taglistå¿«æ·é”®
   nnoremap <silent> <F8> :TlistToggle<CR>
 
 " NerdTree
@@ -179,7 +182,7 @@ Bundle 'kien/tabman.vim'
   let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
   nmap ,n :NERDTree<CR>
   nmap ri :NERDTreeFind<CR>
-  " ´ò¿ª¾Í¿ªÆôNERDTree
+  " æ‰“å¼€å°±å¼€å¯NERDTree
   autocmd vimenter * if !argc() | NERDTree | endif
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   let NERDTreeWinSize=30
@@ -288,7 +291,7 @@ Bundle 'kien/tabman.vim'
   map <leader>et :tabe %%
   map <leader>zf zf%
 
-  " °´ctrl+s±£´æÎÄ¼ş
+  " æŒ‰ctrl+sä¿å­˜æ–‡ä»¶
   " nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
 
   " save file
