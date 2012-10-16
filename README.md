@@ -33,7 +33,8 @@ my vim config
   ```
   $ vim +BundleInstall! +BundleClean +q
   ```
-#### plugins list
+
+### plugins list
 
     zencoding-vim
     nerdtree
@@ -59,7 +60,7 @@ my vim config
     tabman.vim
     vim-indent-guides
 
-##### syntax higlight
+### syntax higlight
 
     jquery
     go
