@@ -149,6 +149,7 @@ Bundle 'mbbill/undotree'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/tabman.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 " Bundle 'snipmate-snippets'
 " Bundle 'honza/snipmate-snippets'
 " Bundle 'garbas/vim-snipmate'
@@ -260,7 +261,6 @@ Bundle 'kien/tabman.vim'
   if has("gui_running")
     " colorscheme solarized
     colorscheme molokai
-    " colorscheme mod_tcsoft
     set linespace=2
     set lines=35
     set columns=100
@@ -335,6 +335,7 @@ Bundle 'kien/tabman.vim'
   au BufNewFile,BufRead *.slim set filetype=slim
   au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
   au BufRead,BufNewFile *.go set filetype=go
+  au BufRead,BufNewFile *.sass set filetype=css
 
 " gb2312 encoding configuration
   " set encoding=gb2312
@@ -367,3 +368,16 @@ Bundle 'kien/tabman.vim'
   " nnoremap <F3> :NumbersToggle<CR>
 " undotree
   " nnoremap <F5> :UndotreeToggle<cr>
+
+" indent_guides
+  let g:indent_guides_auto_colors = 0
+  " for some colorscheme ,autocolor will not work,like 'desert','ir_black'.
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121   ctermbg=3
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=4
+  set ts=2 sw=2 et
+  let g:indent_guides_start_level = 2
+  let g:indent_guides_guide_size = 1
+  let g:indent_guides_enable_on_vim_startup = 0
+
+" indent guides
+  " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
