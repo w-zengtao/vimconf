@@ -1,7 +1,11 @@
-vimrc
-=====
+## vimrc
 
-1. 安装所需要的ctags和grep-ack
+my vim config
+
+
+### install
+
+1. ctags and grep-ack(require)
 
   ```
   $ sudo apt-get install ctags grep-ack
@@ -18,15 +22,51 @@ vimrc
   $ ln -s ~/my_vim_config/.vimrc.bundle ~/.vimrc.bundle
   ```
 
-3. 安装vundle
+3. install vundle plugin manange
 
   ```
   $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
   ```
 
-4. 在gvim中安装所有插件
+4. install all plugins
 
   ```
-  :BundleInstall
+  $ vim +BundleInstall! +BundleClean +q
   ```
+#### plugins list
 
+    zencoding-vim
+    nerdtree
+    ctrlp
+    snipmate-snippets
+    taglist
+    ack
+    vim-rails
+    vim-surround
+    bufexplorer
+    vim-fugitive
+    nerdcommenter
+    vim-powerline
+    vim-endwise
+    tabular
+    vim-css-color
+    supertab
+    matchit
+    vim-fontzoom
+    undotree
+    syntastic
+    vim-easymotion
+    tabman.vim
+    vim-indent-guides
+
+##### syntax higlight
+
+    jquery
+    go
+    slim
+    coffee-script
+    haml
+    markdown
+    cucumber
+    less
+    json
