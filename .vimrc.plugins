@@ -22,11 +22,6 @@
   let NERDTreeQuitOnOpen=0
   let NERDTreeShowHidden=1
 
-" Session List
-  set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
-  nmap <leader>sl :SessionList<CR>
-  nmap <leader>ss :SessionSave<CR>
-
 " Buffer explorer
   nmap <leader>b :BufExplorer<CR>
 

@@ -4,6 +4,9 @@ syntax on
 
 set number
 
+" 减少刷新和重画
+set lz
+
 set tabstop=2
 set expandtab
 set smarttab
@@ -21,7 +24,7 @@ set nowrap
 set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags
 
 " 设置折叠方法
-set fdm=indent
+set fdm=manual
 
 " 进入编辑模式时按tab弹出菜单
 set wildmenu
@@ -79,6 +82,7 @@ set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70"
 "set cursorline
 
 " 修改 vmirc 后自动生效
+map <leader>s :source ~/.vimrc<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " 去掉工具栏
