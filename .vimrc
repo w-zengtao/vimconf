@@ -143,7 +143,6 @@ Bundle 'tmhedberg/matchit'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'anzaika/go.vim'
 Bundle 'mbbill/undotree'
-Bundle "myusuf3/numbers.vim"
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/tabman.vim'
@@ -157,6 +156,7 @@ Bundle 'kien/tabman.vim'
 " Bundle 'spf13/vim-preview'
 " Bundle 'fholgado/minibufexpl.vim'
 " Bundle 'tpope/vim-commentary'
+" Bundle 'myusuf3/numbers.vim'
 
 " snippet
   if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
@@ -182,8 +182,8 @@ Bundle 'kien/tabman.vim'
   " 打开就开启NERDTree
   autocmd vimenter * if !argc() | NERDTree | endif
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  let NERDTreeWinSize=22
-  let NERDTreeQuitOnOpen=1
+  let NERDTreeWinSize=30
+  let NERDTreeQuitOnOpen=0
   let NERDTreeShowHidden=1
 
 " Session List
@@ -255,7 +255,8 @@ Bundle 'kien/tabman.vim'
   set t_Co=256
   set background=dark
   if has("gui_running")
-    colorscheme solarized
+    " colorscheme solarized
+    colorscheme molokai
     " colorscheme mod_tcsoft
     set linespace=2
     set lines=35
