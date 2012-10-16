@@ -1,5 +1,5 @@
-gvimrc
-======
+vimrc
+=====
 
 1. 安装所需要的ctags和grep-ack
 
@@ -10,9 +10,12 @@ gvimrc
 2. clone repository and link .vimrc
 
   ```
-  cd ~
-  $ git clone https://github.com/yinsigan/gvimrc.git
-  ln -s ~/gvimrc/.vimrc ~/.vimrc
+  $ cd ~
+  $ git clone https://github.com/yinsigan/my_vim_config.git
+  $ ln -s ~/my_vim_config/.vimrc ~/.vimrc
+  $ ln -s ~/my_vim_config/.vimrc.map ~/.vimrc.map
+  $ ln -s ~/my_vim_config/.vimrc.plugins ~/.vimrc.plugins
+  $ ln -s ~/my_vim_config/.vimrc.bundle ~/.vimrc.bundle
   ```
 
 3. 安装vundle
