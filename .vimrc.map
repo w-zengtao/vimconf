@@ -35,3 +35,5 @@
     nnoremap k gk
 
   map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>
+
+  map <leader>mp :set matchpairs=<cr>
