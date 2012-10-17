@@ -18,8 +18,8 @@ set smartindent
 
 let mapleader = ','
 
-" 文字过长时不断行显示
-set nowrap
+" 文字过长时断行显示
+set wrap
 
 " 设置折叠方法
 set fdm=manual
