@@ -33,3 +33,5 @@
   " Wrapped lines goes down/up to next row, rather than next line in file.
     nnoremap j gj
     nnoremap k gk
+
+  map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>

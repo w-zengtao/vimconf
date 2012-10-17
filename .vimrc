@@ -21,8 +21,6 @@ let mapleader = ','
 " 文字过长时不断行显示
 set nowrap
 
-" set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags
-
 " 设置折叠方法
 set fdm=manual
 
