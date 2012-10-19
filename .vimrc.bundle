@@ -32,6 +32,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/tabman.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'mklabs/vim-fetch'
 
 " syntax higlight
 Bundle 'nono/jquery.vim'
