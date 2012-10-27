@@ -28,11 +28,11 @@ Bundle 'ervandew/supertab'
 Bundle 'tmhedberg/matchit'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'mbbill/undotree'
-Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/tabman.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mklabs/vim-fetch'
+" Bundle 'scrooloose/syntastic'
 
 " syntax higlight
 Bundle 'nono/jquery.vim'
