@@ -79,7 +79,7 @@
   au BufNewFile,BufRead *.slim set filetype=slim
   au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
   au BufRead,BufNewFile *.go set filetype=go
-  au BufRead,BufNewFile *.sass set filetype=css
+  au BufRead,BufNewFile *.sass set filetype=sass
 
 " neocomplecache
   " let g:neocomplcache_enable_at_startup = 1
