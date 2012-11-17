@@ -13,10 +13,9 @@ Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-surround"
 Bundle 'corntrace/bufexplorer'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'AutoClose'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'HTML-AutoCloseTag'
+Bundle 'Raimondi/delimitMate'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-endwise.git'
@@ -33,6 +32,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'jamescarr/snipmate-nodejs'
 " Bundle 'scrooloose/syntastic'
 " Bundle 'kien/tabman.vim'
+" Bundle 'AutoClose'
+" Bundle 'HTML-AutoCloseTag'
 
 " syntax higlight
 Bundle 'nono/jquery.vim'
