@@ -15,7 +15,7 @@
   nmap ri :NERDTreeFind<CR>
   autocmd vimenter * if !argc() | NERDTree | endif
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  let NERDTreeWinSize=30
+  let NERDTreeWinSize=33
   let NERDTreeQuitOnOpen=0
   let NERDTreeShowHidden=1
 
@@ -77,6 +77,9 @@
   au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
   au BufRead,BufNewFile *.go set filetype=go
   au BufRead,BufNewFile *.sass set filetype=sass
+
+" syntastic
+  let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
 
 " neocomplecache
   " let g:neocomplcache_enable_at_startup = 1
