@@ -3,9 +3,6 @@
     source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
   endif
 
-" AutoCloseTag
-  au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
-
 " Taglist
   nnoremap <silent> <F8> :TlistToggle<CR> nmap <Leader>ac <Plug>ToggleAutoCloseMappings
 
