@@ -78,6 +78,8 @@
   au BufRead,BufNewFile *.go set filetype=go
   au BufRead,BufNewFile *.sass set filetype=sass
 
+  au FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
+
 " syntastic
   let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
 
