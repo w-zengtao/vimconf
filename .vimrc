@@ -10,6 +10,9 @@ set scrolloff=3                 " minimum lines to keep above and below cursor
 " 减少刷新和重画
 set lz
 
+" Open new split windows to the right/bottom
+set splitright splitbelow
+
 set tabstop=2
 set expandtab
 set smarttab
