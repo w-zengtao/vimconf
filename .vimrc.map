@@ -43,3 +43,6 @@
   map tn :tabnext<CR>
   map tp :tabprev<CR>
   map tc :tabclose<CR>
+
+  " Highlight word at cursor without changing position
+  nnoremap <leader>h *<C-O>
