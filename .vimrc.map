@@ -25,6 +25,7 @@
 
   nnoremap <F2> :set invpaste paste?<CR>
   set pastetoggle=<F2>
+  au InsertLeave * set nopaste
 
   nmap <silent> ,/ :nohlsearch<CR>
 
@@ -37,3 +38,8 @@
   map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>
 
   map <leader>mp :set matchpairs=<cr>
+
+  " tab config
+  map tn :tabnext<CR>
+  map tp :tabprev<CR>
+  map tc :tabclose<CR>

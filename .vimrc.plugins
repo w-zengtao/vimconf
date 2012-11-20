@@ -81,7 +81,7 @@
   au FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 
 " syntastic
-  let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
+  " let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
 
 " neocomplecache
   " let g:neocomplcache_enable_at_startup = 1
