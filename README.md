@@ -55,9 +55,7 @@ my vim config
   * matchit
   * vim-fontzoom
   * undotree
-  * syntastic
   * vim-easymotion
-  * tabman.vim
   * vim-indent-guides
 
 ## syntax higlight
