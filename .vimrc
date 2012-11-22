@@ -12,6 +12,7 @@ set lz
 
 " Open new split windows to the right/bottom
 " set splitright splitbelow
+set splitright
 
 set tabstop=2
 set expandtab
