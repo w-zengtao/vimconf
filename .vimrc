@@ -121,6 +121,12 @@ if has("gui_running")
   set linespace=2
   set lines=35
   set columns=100
+  " Remove toolbar, left scrollbar and right scrollbar"
+  set guioptions-=T
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
 else
   colorscheme molokai
 endif
