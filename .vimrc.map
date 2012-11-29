@@ -2,6 +2,7 @@
   vmap <C-c> "+y
   map <C-a> ggVG
   cnoremap %% <C-R>=expand('%:h').'/'<cr>
+  map <C-B>        "+gP"
 
   map <leader>ew :e %%
   map <leader>es :sp %%
