@@ -75,6 +75,7 @@
   au BufNewFile,BufRead *.less set filetype=less
   au BufNewFile,BufRead *.slim set filetype=slim
   au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+  au BufRead,BufNewFile *_spec.rb set ft=ruby-rspec syntax=ruby
   au BufRead,BufNewFile *.go set filetype=go
   au BufRead,BufNewFile *.sass set filetype=sass
 
