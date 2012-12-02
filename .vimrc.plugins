@@ -51,6 +51,10 @@
 
 " nerdcommenter
   let NERDSpaceDelims=1
+  let g:NERDCustomDelimiters = {
+        \ 'ruby-rails': { 'left': '#', 'leftAlt': 'FOO', 'rightAlt': 'BAR' },
+        \ 'grondle': { 'left': '{{', 'right': '}}' }
+    \ }
 
 " ack
   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
