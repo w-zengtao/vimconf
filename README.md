@@ -53,9 +53,8 @@ my vim config
   * vim-css-color
   * supertab
   * matchit
-  * vim-fontzoom
-  * undotree
   * vim-easymotion
+  * autoclose
   * vim-indent-guides
 
 ## syntax higlight
