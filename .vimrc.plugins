@@ -86,6 +86,7 @@
 
   au FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
   au FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4
+  au FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 " syntastic
   " let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
