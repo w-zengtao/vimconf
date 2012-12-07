@@ -5,33 +5,8 @@ my vim config
 
 ## install
 
-1. ctags and grep-ack(require)
-
   ```
-  $ sudo apt-get install ctags grep-ack
-  ```
-
-2. clone repository and link .vimrc
-
-  ```
-  $ cd ~
-  $ git clone https://github.com/yinsigan/my_vim_config.git
-  $ ln -s ~/my_vim_config/.vimrc ~/.vimrc
-  $ ln -s ~/my_vim_config/.vimrc.map ~/.vimrc.map
-  $ ln -s ~/my_vim_config/.vimrc.plugins ~/.vimrc.plugins
-  $ ln -s ~/my_vim_config/.vimrc.bundle ~/.vimrc.bundle
-  ```
-
-3. install vundle plugin manange
-
-  ```
-  $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-  ```
-
-4. install all plugins
-
-  ```
-  $ vim +BundleInstall! +BundleClean +q
+  $ sudo bash ./install.sh
   ```
 
 ## plugins list
