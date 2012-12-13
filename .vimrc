@@ -138,3 +138,8 @@ elseif has("gui_gtk")
 else
   set guifont=Monaco:h17
 end
+
+highlight whitespaceEOL term=reverse ctermbg=red guibg=red
+match whitespaceEOL /\s\+\(\%#\)\@!$/
+syntax match whitespaceEOL /\s\+$/
+syntax match ColorColumn /\%>80v.\+/
