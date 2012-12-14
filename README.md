@@ -53,3 +53,7 @@ my vim config
   * cucumber
   * less
   * json
+
+# license
+
+MIT
