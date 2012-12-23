@@ -5,7 +5,7 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'yinsigan/vim-snipmate'
-Bundle 'spf13/snipmate-snippets'
+Bundle 'yinsigan/snipmate-snippets'
 Bundle "taglist.vim"
 Bundle "mileszs/ack.vim"
 Bundle "tpope/vim-rails"
