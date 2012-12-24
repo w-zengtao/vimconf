@@ -54,6 +54,24 @@ my vim config
   * less
   * json
 
+## key binding
+
+  * <leader>b                     buffers explorer
+  * <leader>e                     nerdtree find
+  * <ctrl>e                       nerdtree toggle
+  * <leader>gs                    display git status
+  * <leader>a=                    align with =
+  * <leader>c<space>              comment toggle
+  * <leader>ig                    indent guides toggle
+  * <F8>                          taglist toggle
+  * <leader>,/                    highlight search
+  * <leader>ew                    split windows
+  * <leader>ev                    vsplit windows
+  * <ctrl>n                       create a new tab
+  * <F2>                          paste toggle
+  * <leader>mp                    diplay matchpairs
+  * <leader>h                     highlight word
+
 # license
 
 MIT
