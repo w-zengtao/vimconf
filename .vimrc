@@ -134,7 +134,8 @@ endif
 if has("gui_macvim")
   set guifont=Monaco:h17
 elseif has("gui_gtk")
-  set guifont=Monospace\ 10
+  " set guifont=Monospace\ 10
+  set guifont=Ubuntu\ Mono\ 14
 else
   set guifont=Monaco:h17
 end
