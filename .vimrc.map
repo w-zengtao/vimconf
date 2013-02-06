@@ -23,7 +23,7 @@
   map <C-h> <C-W>h
   map <C-l> <C-W>l
 
-  map <F6> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
+  " map <F6> :!ctags -R --languages=-javascript --exclude=.git --exclude=log --fields=+iaS --extra=+q . `rvm gemdir`/gems<CR>
 
   nnoremap <F2> :set invpaste paste?<CR>
   set pastetoggle=<F2>
@@ -37,7 +37,8 @@
     nnoremap j gj
     nnoremap k gk
 
-  map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>
+  " map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>
+  map <F5> :!ruby %<cr>
 
   map <leader>mp :set matchpairs=<cr>
 
