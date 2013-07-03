@@ -40,7 +40,7 @@ inoremap <BS> <Left><Del>
 set whichwrap+=[
 
 " 设置一行最多80个字符
-set textwidth=80
+" set textwidth=80
 
 " 自动重新读入
 set autoread
