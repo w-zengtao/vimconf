@@ -127,6 +127,12 @@ if has("gui_running")
   set guioptions-=L
   " set guioptions-=r
   " set guioptions-=R
+  " set background=dark
+  " let g:solarized_termtrans=1
+  " let g:solarized_termcolors=256
+  " let g:solarized_contrast="high"
+  " let g:solarized_visibility="high"
+  " colorscheme solarized
 else
   colorscheme molokai
 endif
