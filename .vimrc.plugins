@@ -58,8 +58,8 @@
 
 " statusline
   set laststatus=2
-  let g:Powerline_symbols = 'unicode'
-  let g:Powerline_stl_path_style = 'full'
+  " let g:Powerline_symbols = 'unicode'
+  " let g:Powerline_stl_path_style = 'full'
 
 " indent_guides
   let g:indent_guides_auto_colors = 0
