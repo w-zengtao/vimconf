@@ -3,6 +3,7 @@ filetype plugin indent on
 syntax on
 
 set number
+set guitablabel=%-0.40t%M
 
 " set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=6                   " minimum lines to keep above and below cursor

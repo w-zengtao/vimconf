@@ -24,7 +24,7 @@
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
       \ 'file': '\.exe$\|\.so$\|\.dll$' }
   let g:ctrlp_working_path_mode = 0
-  let g:ctrlp_max_height = 20
+  let g:ctrlp_max_height = 6
 
 " Fugitive
   nnoremap <silent> <leader>gs :Gstatus<CR>
