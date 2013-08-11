@@ -9,7 +9,9 @@ set guitablabel=%-0.40t%M
 set scrolloff=6                   " minimum lines to keep above and below cursor
 
 " 减少刷新和重画
-set lz
+" set lz
+
+let html_no_rendering=1
 
 " Open new split windows to the right/bottom
 " set splitright splitbelow
