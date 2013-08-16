@@ -12,7 +12,6 @@ Bundle "tpope/vim-rails"
 Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-surround"
 Bundle 'corntrace/bufexplorer'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'ap/vim-css-color'
@@ -30,6 +29,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'tomtom/tcomment_vim'
+" Bundle 'scrooloose/nerdcommenter'
 " Bundle 'godlygeek/tabular'
 " Bundle 'tpope/vim-sensible'
 " Bundle 'tpope/vim-dispatch'
