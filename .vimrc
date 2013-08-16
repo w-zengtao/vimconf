@@ -9,7 +9,7 @@ set guitablabel=%-0.40t%M
 set scrolloff=6                   " minimum lines to keep above and below cursor
 
 " 减少刷新和重画
-" set lz
+set lz
 
 let html_no_rendering=1
 
@@ -25,6 +25,8 @@ set softtabstop=2
 
 set autoindent
 set smartindent
+
+" set gcr=n:blinkon0
 
 let mapleader = ','
 
@@ -65,11 +67,11 @@ set mouse=a
 
 " list chars
 set list
-set listchars=""                  
-set listchars=tab:\ \             
-set listchars+=trail:.            
-set listchars+=extends:>          
-set listchars+=precedes:<         
+set listchars=""
+set listchars=tab:\ \
+set listchars+=trail:.
+set listchars+=extends:>
+set listchars+=precedes:<
 
 " 启动的时候不显示那个援助索马里儿童的提示
 set shortmess=atI
@@ -153,3 +155,8 @@ highlight whitespaceEOL term=reverse ctermbg=red guibg=red
 match whitespaceEOL /\s\+\(\%#\)\@!$/
 syntax match whitespaceEOL /\s\+$/
 syntax match ColorColumn /\%>80v.\+/
+
+hi CursorLineNr   term=bold ctermfg=Yellow gui=bold guifg=Yellow
+
+" remove tailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e

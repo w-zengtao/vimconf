@@ -83,7 +83,7 @@
   au BufRead,BufNewFile *.sass      set filetype=sass
   au BufRead,BufNewFile *.rb        set filetype=ruby-rails syntax=ruby
 
-  au FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
+  au FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
   au FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4
   au FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
   au FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -97,3 +97,4 @@
   " let g:neocomplcache_enable_smart_case = 1
   " let g:neocomplcache_enable_camel_case_completion = 1
   " let g:neocomplcache_enable_underbar_completion = 1
+
