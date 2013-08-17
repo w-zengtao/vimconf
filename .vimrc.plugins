@@ -3,9 +3,6 @@
     source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
   endif
 
-" Taglist
-  nnoremap <silent> <F8> :TlistToggle<CR> nmap <Leader>ac <Plug>ToggleAutoCloseMappings
-
 " NerdTree
   map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
   map <leader>e :NERDTreeFind<CR>
@@ -18,15 +15,24 @@
   autocmd VimEnter * wincmd l
   autocmd BufNew   * wincmd l
 
-" Buffer explorer
-  nmap <leader>b :BufExplorer<CR>
-
 " ctrlp
   let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
       \ 'file': '\.exe$\|\.so$\|\.dll$' }
   let g:ctrlp_working_path_mode = 0
   let g:ctrlp_max_height = 6
+
+" Buffer explorer
+  " nmap <leader>b :BufExplorer<CR>
+  " let g:bufExplorerDefaultHelp=0
+
+" Unite
+  let g:unite_source_history_yank_enable = 1
+  call unite#filters#matcher_default#use(['matcher_fuzzy'])
+  nnoremap <leader>v :<C-u>Unite -no-split -buffer-name=files file<cr>
+  nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank  history/yank<cr>
+  nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+
 
 " Fugitive
   nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -36,24 +42,8 @@
   nnoremap <silent> <leader>gl :Glog<CR>
   nnoremap <silent> <leader>gp :Git push<CR>
 
-" Tabularize
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:<CR>
-  vmap <Leader>a: :Tabularize /:<CR>
-  nmap <Leader>a:: :Tabularize /:\zs<CR>
-  vmap <Leader>a:: :Tabularize /:\zs<CR>
-  nmap <Leader>a, :Tabularize /,<CR>
-  vmap <Leader>a, :Tabularize /,<CR>
-  nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-  vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-
-" nerdcommenter
-  let NERDSpaceDelims=1
-  let g:NERDCustomDelimiters = {
-        \ 'ruby-rails': { 'left': '#', 'leftAlt': 'FOO', 'rightAlt': 'BAR' },
-        \ 'grondle': { 'left': '{{', 'right': '}}' }
-    \ }
+" easy_align
+vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " ack
   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -88,6 +78,7 @@
   au FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
   au FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
+
 " syntastic
   " let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
 
@@ -98,5 +89,25 @@
   " let g:neocomplcache_enable_camel_case_completion = 1
   " let g:neocomplcache_enable_underbar_completion = 1
 
-" easy_align
-vnoremap <silent> <Enter> :EasyAlign<cr>
+" Taglist
+  " nnoremap <silent> <F8> :TlistToggle<CR> nmap <Leader>ac <Plug>ToggleAutoCloseMappings
+
+
+" nerdcommenter
+  " let NERDSpaceDelims=1
+  " let g:NERDCustomDelimiters = {
+  "       \ 'ruby-rails': { 'left': '#', 'leftAlt': 'FOO', 'rightAlt': 'BAR' },
+  "       \ 'grondle': { 'left': '{{', 'right': '}}' }
+  "   \ }
+
+" Tabularize
+  " nmap <Leader>a= :Tabularize /=<CR>
+  " vmap <Leader>a= :Tabularize /=<CR>
+  " nmap <Leader>a: :Tabularize /:<CR>
+  " vmap <Leader>a: :Tabularize /:<CR>
+  " nmap <Leader>a:: :Tabularize /:\zs<CR>
+  " vmap <Leader>a:: :Tabularize /:\zs<CR>
+  " nmap <Leader>a, :Tabularize /,<CR>
+  " vmap <Leader>a, :Tabularize /,<CR>
+  " nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+  " vmap <Leader>a<Bar> :Tabularize /<Bar><CR>

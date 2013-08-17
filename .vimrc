@@ -102,8 +102,13 @@ set go-=T
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " vundle setting
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+if has('vim_starting')
+ set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 if filereadable(expand("~/.vimrc.bundle"))
   source ~/.vimrc.bundle
@@ -122,7 +127,8 @@ set t_Co=256
 set background=dark
 if has("gui_running")
   " colorscheme solarized
-  colorscheme molokai
+  " colorscheme molokai
+  colorscheme Tomorrow
   set linespace=2
   set lines=35
   set columns=100
@@ -139,13 +145,15 @@ if has("gui_running")
   " let g:solarized_visibility="high"
   " colorscheme solarized
 else
-  colorscheme molokai
+  colorscheme Tomorrow
+  " colorscheme molokai
 endif
 
 if has("gui_macvim")
   set guifont=Monaco:h17
 elseif has("gui_gtk")
-  set guifont=Monospace\ 11
+  " set guifont=Monospace\ 11
+  set guifont=Menlo\ 11
   " set guifont=Ubuntu\ Mono\ 14
 else
   set guifont=Monaco:h17
@@ -156,7 +164,7 @@ match whitespaceEOL /\s\+\(\%#\)\@!$/
 syntax match whitespaceEOL /\s\+$/
 syntax match ColorColumn /\%>80v.\+/
 
-hi CursorLineNr   term=bold ctermfg=Yellow gui=bold guifg=Yellow
+" hi CursorLineNr   term=bold ctermfg=Yellow gui=bold guifg=Yellow
 
 " remove tailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e

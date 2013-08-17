@@ -24,30 +24,31 @@ my vim config
 
   * zencoding-vim
   * nerdtree
-  * ctrlp
   * snipmate-snippets
-  * taglist
   * ack
   * vim-rails
   * vim-surround
-  * bufexplorer
   * vim-fugitive
-  * nerdcommenter
-  * vim-powerline
   * vim-endwise
-  * tabular
   * vim-css-color
   * supertab
   * matchit
   * vim-easymotion
   * autoclose
   * vim-indent-guides
+  * vim-airline
+  * vim-nerdtree-tabs
+  * vim-easy-align
+  * tcomment_vim
+  * vim-tomorrow-theme
+  * unite.vim
+  * vim-yankstack
+  * lusty
 
 ## syntax higlight
 
   * jquery
   * go
-  * slim
   * coffee-script
   * haml
   * markdown
@@ -58,13 +59,12 @@ my vim config
 ## key binding
 
   * `<leader>b`                     buffers explorer
+  * `<leader>v`                     unite file explorer
   * `<leader>e`                     nerdtree find
   * `<ctrl>e`                       nerdtree toggle
   * `<leader>gs`                    display git status
-  * `<leader>a=`                    align with =
-  * `<leader>c<space>`              comment toggle
+  * `gc<space>`                     comment toggle
   * `<leader>ig`                    indent guides toggle
-  * `<F8>`                          taglist toggle
   * `<leader>,/`                    highlight search
   * `<leader>ew`                    split windows
   * `<leader>ev`                    vsplit windows
@@ -72,7 +72,9 @@ my vim config
   * `<F2>`                          paste toggle
   * `<leader>mp`                    diplay matchpairs
   * `<leader>h`                     highlight word
-  * `<ctrl>p`                       ctrlp
+  * `<leader>lb`                    Opens buffer explorer
+  * `<leader>lg`                    Opens buffer grep
+  * `<leader>lf`                    Open filesystem explorer
 
 # license
 

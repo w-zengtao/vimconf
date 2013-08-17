@@ -16,7 +16,7 @@
 
   set hidden
 
-  map <C-n> :tabnew<cr>
+  map <C-m> :tabnew<cr>
 
   map <C-j> <C-W>j
   map <C-k> <C-W>k

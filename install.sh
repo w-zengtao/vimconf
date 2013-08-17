@@ -7,5 +7,5 @@ ln -s ~/vimconf/.vimrc ~/.vimrc
 ln -s ~/vimconf/.vimrc.map ~/.vimrc.map
 ln -s ~/vimconf/.vimrc.plugins ~/.vimrc.plugins
 ln -s ~/vimconf/.vimrc.bundle ~/.vimrc.bundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall! +BundleClean +q
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+vim +NeoBundleInstall! +NeoBundleClean +q
