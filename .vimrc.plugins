@@ -111,3 +111,6 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
   " vmap <Leader>a, :Tabularize /,<CR>
   " nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
   " vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+
+" airline
+let g:airline_theme="tomorrow"
