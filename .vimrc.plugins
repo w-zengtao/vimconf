@@ -67,11 +67,14 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
   au BufNewFile,BufRead *.coffee    set filetype=coffee
   au BufNewFile,BufRead *.less      set filetype=less
   au BufNewFile,BufRead *.slim      set filetype=slim
-  au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+  " au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+  au BufNewFile,BufRead *.js set filetype=javascript
   au BufRead,BufNewFile *_spec.rb   set ft=ruby-rspec syntax=ruby
   au BufRead,BufNewFile *.go        set filetype=go
   au BufRead,BufNewFile *.sass      set filetype=sass
-  au BufRead,BufNewFile *.rb        set filetype=ruby-rails syntax=ruby
+  " au BufRead,BufNewFile *.rb        set filetype=ruby-rails syntax=ruby
+  au BufRead,BufNewFile *.rb        set filetype=ruby syntax=ruby
+  au BufRead,BufNewFile *.erb       set filetype=eruby
 
   au FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
   au FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4

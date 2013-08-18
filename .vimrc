@@ -1,6 +1,4 @@
 set nocompatible
-filetype plugin indent on
-syntax on
 
 set number
 set guitablabel=%-0.40t%M
@@ -168,3 +166,6 @@ syntax match ColorColumn /\%>80v.\+/
 
 " remove tailing whitespace
 " autocmd BufWritePre * :%s/\s\+$//e
+
+filetype plugin indent on
+syntax on

@@ -1,5 +1,5 @@
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
@@ -10,7 +10,7 @@ NeoBundle "tpope/vim-rails"
 NeoBundle "tpope/vim-bundler"
 NeoBundle 'kien/ctrlp.vim.git'
 NeoBundle "tpope/vim-surround"
-NeoBundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+" NeoBundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 NeoBundle 'tpope/vim-endwise.git'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'ervandew/supertab'
