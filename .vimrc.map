@@ -47,5 +47,11 @@
   map tp :tabprev<CR>
   map tc :tabclose<CR>
 
+  map <leader>bd :MBEbd<cr>
+  map <leader>bp :MBEbp<cr>
+  map <leader>bn :MBEbn<cr>
+  map <leader>mbt :MBEToggle<cr>
+  map <leader>f :MBEFocus<cr>
+
   " Highlight word at cursor without changing position
   nnoremap <leader>h *<C-O>

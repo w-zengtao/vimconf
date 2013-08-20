@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 sudo apt-get install ctags grep-ack
+sudo apt-get install python-software-properties (if required)
+sudo apt-add-repository ppa:mizuno-as/silversearcher-ag
+sudo apt-get update
+sudo apt-get install silversearcher-ag
 cd ~
 git clone git://github.com/yinsigan/vimconf.git
 ln -s ~/vimconf/.vimrc ~/.vimrc
