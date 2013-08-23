@@ -7,7 +7,7 @@
   map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
   map <leader>e :NERDTreeFind<CR>
   let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-  autocmd vimenter * if !argc() | NERDTree | endif
+  " autocmd vimenter * if !argc() | NERDTree | endif
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   let NERDTreeWinSize=33
   let NERDTreeQuitOnOpen=0
@@ -34,7 +34,8 @@
   " nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 
 " Yankstack
-nmap <leader>p <Plug>yankstack_substitute_older_paste
+" nmap <leader>p <Plug>yankstack_substitute_older_paste
+" nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 " Fugitive
   nnoremap <silent> <leader>gs :Gstatus<CR>
