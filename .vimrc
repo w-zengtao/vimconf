@@ -72,7 +72,7 @@ set listchars+=extends:>
 set listchars+=precedes:<
 
 " 启动的时候不显示那个援助索马里儿童的提示
-" set shortmess=atI
+set shortmess=atI
 
 " 搜索时忽略大小写
 set ignorecase
