@@ -143,7 +143,7 @@ if has("gui_running")
   " let g:solarized_visibility="high"
   " colorscheme solarized
 else
-  colorscheme Tomorrow
+  colorscheme Tomorrow-Night
   " colorscheme molokai
 endif
 
