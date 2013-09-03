@@ -86,7 +86,7 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 
 
 " syntastic
-let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml'] }
+let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml', 'slim', 'scss'] }
 highlight SyntasticErrorSign guifg=white guibg=red
 map <leader>ct :SyntasticToggleMode<CR>
 
