@@ -169,3 +169,6 @@ syntax match ColorColumn /\%>80v.\+/
 
 filetype plugin indent on
 syntax on
+
+" easy_align
+vnoremap <silent> <Enter> :EasyAlign<cr>

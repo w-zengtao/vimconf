@@ -45,8 +45,6 @@
   nnoremap <silent> <leader>gl :Glog<CR>
   nnoremap <silent> <leader>gp :Git push<CR>
 
-" easy_align
-vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " ack
   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -126,3 +124,4 @@ let g:airline_theme="tomorrow"
 " GitGutter
 map <leader>gi :GitGutterToggle<cr>
 let g:gitgutter_enabled = 0
+
