@@ -126,7 +126,7 @@ set background=dark
 if has("gui_running")
   " colorscheme solarized
   " colorscheme molokai
-  colorscheme Tomorrow-Night
+  colorscheme Tomorrow-Night-Eighties
   set linespace=2
   set lines=35
   set columns=100
@@ -143,7 +143,7 @@ if has("gui_running")
   " let g:solarized_visibility="high"
   " colorscheme solarized
 else
-  colorscheme Tomorrow-Night
+  colorscheme Tomorrow-Night-Eighties
   " colorscheme molokai
 endif
 
