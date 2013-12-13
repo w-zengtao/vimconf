@@ -57,3 +57,4 @@
 
   " Highlight word at cursor without changing position
   nnoremap <leader>h *<C-O>
+  map <leader>bd :MBEbd<cr>

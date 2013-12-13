@@ -151,7 +151,7 @@ if has("gui_macvim")
   set guifont=Monaco:h17
 elseif has("gui_gtk")
   " set guifont=Monospace\ 11
-  set guifont=Menlo\ 11
+  set guifont=Menlo\ 12
   " set guifont=Ubuntu\ Mono\ 14
 else
   set guifont=Monaco:h17
