@@ -33,6 +33,7 @@ NeoBundle 'yinsigan/Smyck-Color-Scheme'
 NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'flazz/vim-colorschemes'
 " NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundleCheck
 " NeoBundle 'jistr/vim-nerdtree-tabs'
