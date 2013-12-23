@@ -124,9 +124,8 @@ endif
 set t_Co=256
 set background=dark
 if has("gui_running")
-  " colorscheme solarized
-  " colorscheme molokai
-  colorscheme Tomorrow-Night-Eighties
+  " colorscheme Tomorrow-Night-Eighties
+  colorscheme github
   set linespace=2
   set lines=35
   set columns=100
@@ -143,8 +142,7 @@ if has("gui_running")
   " let g:solarized_visibility="high"
   " colorscheme solarized
 else
-  colorscheme Tomorrow-Night-Eighties
-  " colorscheme molokai
+  colorscheme github
 endif
 
 if has("gui_macvim")
