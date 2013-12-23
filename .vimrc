@@ -143,6 +143,7 @@ if has("gui_running")
   " colorscheme solarized
 else
   colorscheme github
+  set nocursorline
 endif
 
 if has("gui_macvim")
