@@ -58,3 +58,8 @@
   " Highlight word at cursor without changing position
   nnoremap <leader>h *<C-O>
   map <leader>bd :MBEbd<cr>
+
+  nmap t o<ESC>k
+  nmap T O<ESC>j
+
+  cmap w!! w !sudo tee >/dev/null %
