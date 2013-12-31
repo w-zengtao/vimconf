@@ -35,6 +35,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'eclipse.vim'
+" NeoBundle 'kien/rainbow_parentheses.vim'
 " NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundleCheck
 " NeoBundle 'jistr/vim-nerdtree-tabs'
