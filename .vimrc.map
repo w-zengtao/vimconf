@@ -48,6 +48,7 @@
   map tc :tabclose<CR>
 
   map <leader>bd :MBEbd<cr>
+  map <leader>ba :MBECloseAll<cr>
   map <leader>bp :MBEbp<cr>
   map <leader>bn :MBEbn<cr>
   map <leader>mbt :MBEToggle<cr>

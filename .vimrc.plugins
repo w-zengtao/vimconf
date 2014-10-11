@@ -23,8 +23,8 @@
   let g:ctrlp_max_height = 6
 
 " Buffer explorer
-  " nmap <leader>b :BufExplorer<CR>
-  " let g:bufExplorerDefaultHelp=0
+  nmap <leader>n :BufExplorer<CR>
+  let g:bufExplorerDefaultHelp=0
 
 " Unite
   " let g:unite_source_history_yank_enable = 1
