@@ -106,11 +106,13 @@ if has('vim_starting')
  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 if filereadable(expand("~/.vimrc.bundle"))
   source ~/.vimrc.bundle
 endif
+
+call neobundle#end()
 
 if filereadable(expand("~/.vimrc.plugins"))
   source ~/.vimrc.plugins
