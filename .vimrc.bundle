@@ -1,6 +1,7 @@
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdtree.git'
+" vim-snipmate dependencies
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'yinsigan/vim-snipmate'
@@ -36,6 +37,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'eclipse.vim'
 NeoBundle 'corntrace/bufexplorer'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'drmingdrmer/xptemplate'
 " NeoBundle 'kien/rainbow_parentheses.vim'
 " NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundleCheck

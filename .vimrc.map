@@ -38,7 +38,7 @@
     nnoremap k gk
 
   " map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>
-  map <F12> :1,%s/\s\+\(\%#\)\@!$//g<cr>
+  map f12 :1,%s/\s\+\(\%#\)\@!$//g<cr>
 
   map <leader>mp :set matchpairs=<cr>
 

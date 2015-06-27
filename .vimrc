@@ -126,11 +126,13 @@ endif
 set t_Co=256
 set background=light
 if has("gui_running")
-  " colorscheme Tomorrow-Night-Eighties
-  colorscheme molokai
+  colorscheme Tomorrow-Night
+  " colorscheme molokai
   set linespace=2
-  set lines=35
-  set columns=100
+  " set lines=35
+  set lines=999
+  set columns=999
+  " set columns=100
   " Remove toolbar, left scrollbar and right scrollbar"
   set guioptions-=T
   set guioptions-=l
