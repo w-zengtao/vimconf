@@ -5,7 +5,7 @@ NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'yinsigan/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
+" NeoBundle 'honza/vim-snippets'
 NeoBundle 'yinsigan/snipmate-snippets'
 NeoBundle "tpope/vim-rails"
 NeoBundle "tpope/vim-bundler"
@@ -83,3 +83,4 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'leshill/vim-json'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'mustache/vim-mustache-handlebars'

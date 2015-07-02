@@ -151,7 +151,7 @@ else
 endif
 
 if has("gui_macvim")
-  set guifont=Monaco:h17
+  set guifont=Monaco:h16
 elseif has("gui_gtk")
   set guifont=Monospace\ 11
   " set guifont=Menlo\ 12
@@ -161,7 +161,7 @@ else
 end
 
 highlight whitespaceEOL term=reverse ctermbg=red guibg=red
-match whitespaceEOL /\s\+\(\%#\)\@!$/
+match whitespaceeol /\s\+\(\%#\)\@!$/
 syntax match whitespaceEOL /\s\+$/
 syntax match ColorColumn /\%>80v.\+/
 
