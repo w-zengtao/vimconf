@@ -126,11 +126,13 @@ endif
 set t_Co=256
 set background=light
 if has("gui_running")
-  " colorscheme Tomorrow-Night-Eighties
   colorscheme Tomorrow-Night
+  " colorscheme molokai
   set linespace=2
-  set lines=35
-  set columns=100
+  " set lines=35
+  set lines=999
+  set columns=999
+  " set columns=100
   " Remove toolbar, left scrollbar and right scrollbar"
   set guioptions-=T
   set guioptions-=l
@@ -149,7 +151,7 @@ else
 endif
 
 if has("gui_macvim")
-  set guifont=Monaco:h17
+  set guifont=Monaco:h16
 elseif has("gui_gtk")
   set guifont=文泉驿等宽微米黑\ 12
   " set guifont=Menlo\ 12
@@ -159,7 +161,7 @@ else
 end
 
 highlight whitespaceEOL term=reverse ctermbg=red guibg=red
-match whitespaceEOL /\s\+\(\%#\)\@!$/
+match whitespaceeol /\s\+\(\%#\)\@!$/
 syntax match whitespaceEOL /\s\+$/
 syntax match ColorColumn /\%>80v.\+/
 
