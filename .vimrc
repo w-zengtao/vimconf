@@ -127,7 +127,7 @@ set t_Co=256
 set background=light
 if has("gui_running")
   " colorscheme Tomorrow-Night-Eighties
-  colorscheme molokai
+  colorscheme Tomorrow-Night
   set linespace=2
   set lines=35
   set columns=100
@@ -151,7 +151,7 @@ endif
 if has("gui_macvim")
   set guifont=Monaco:h17
 elseif has("gui_gtk")
-  set guifont=Monospace\ 11
+  set guifont=文泉驿等宽微米黑\ 12
   " set guifont=Menlo\ 12
   " set guifont=Ubuntu\ Mono\ 14
 else

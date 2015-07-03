@@ -36,6 +36,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'eclipse.vim'
 NeoBundle 'corntrace/bufexplorer'
+NeoBundle 'burnettk/vim-angular'
 " NeoBundle 'kien/rainbow_parentheses.vim'
 " NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundleCheck
