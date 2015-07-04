@@ -2,14 +2,16 @@
   vmap <C-c> "+y
   map <C-a> ggVG
   cnoremap %% <C-R>=expand('%:h').'/'<cr>
-  map <C-B>        "+gP
-  imap <C-B>      <esc>"+gP
+"  map <C-B>        "+gP
+"  imap <C-B>      <esc>"+gP
 
   map <leader>ew :e %%
   map <leader>es :sp %%
   map <leader>ev :vsp %%
   map <leader>et :tabe %%
   map <leader>zf zf%
+
+  map <leader>s :w<CR>
 
   inoremap <C-s> <ESC>:w<CR>
   nnoremap <C-s> :w<CR>
@@ -47,12 +49,12 @@
   map tp :tabprev<CR>
   map tc :tabclose<CR>
 
-  map <leader>bd :MBEbd<cr>
-  map <leader>ba :MBECloseAll<cr>
-  map <leader>bp :MBEbp<cr>
-  map <leader>bn :MBEbn<cr>
-  map <leader>mbt :MBEToggle<cr>
-  map <leader>f :MBEFocus<cr>
+  " map <leader>bd :MBEbd<cr>
+  " map <leader>ba :MBECloseAll<cr>
+  " map <leader>bp :MBEbp<cr>
+  " map <leader>bn :MBEbn<cr>
+  " map <leader>mbt :MBEToggle<cr>
+  " map <leader>f :MBEFocus<cr>
 
   map <F5> :!ruby %<cr>
 
