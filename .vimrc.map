@@ -40,7 +40,7 @@
     nnoremap k gk
 
   " map <F9> :set tags=~/.rvm/gems/ruby-1.9.3-p194/gems/tags,./tags<cr>
-  map f12 :1,%s/\s\+\(\%#\)\@!$//g<cr>
+  map <C-i> :1,%s/\s\+\(\%#\)\@!$//g<cr>
 
   map <leader>mp :set matchpairs=<cr>
 
@@ -56,7 +56,7 @@
   " map <leader>mbt :MBEToggle<cr>
   " map <leader>f :MBEFocus<cr>
 
-  map <F5> :!ruby %<cr>
+  map <C-r> :!ruby %<cr>
 
   " Highlight word at cursor without changing position
   nnoremap <leader>h *<C-O>

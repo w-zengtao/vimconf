@@ -41,9 +41,9 @@ NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'drmingdrmer/xptemplate'
+NeoBundle 'mxw/vim-jsx'
 " NeoBundle 'kien/rainbow_parentheses.vim'
 " NeoBundle 'maxbrunsfeld/vim-yankstack'
-NeoBundleCheck
 " NeoBundle 'jistr/vim-nerdtree-tabs'
 " NeoBundle 'sjbach/lusty'
 " NeoBundle 'Shougo/unite.vim'
@@ -68,6 +68,7 @@ NeoBundleCheck
 " Bundle 'kien/tabman.vim'
 " Bundle 'HTML-AutoCloseTag'
 " Bundle 'flazz/vim-colorschemes'
+NeoBundle 'jdkanani/vim-material-theme'
 
 " syntax higlight
 NeoBundle 'nono/jquery.vim'
@@ -85,3 +86,4 @@ NeoBundle 'leshill/vim-json'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundleCheck

@@ -84,7 +84,7 @@
 
 
 " syntastic
-let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml', 'slim', 'scss'] }
+let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'haml', 'slim', 'scss', 'html'] }
 highlight SyntasticErrorSign guifg=white guibg=red
 map <leader>ct :SyntasticToggleMode<CR>
 
